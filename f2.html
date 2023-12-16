@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        /* Add your custom CSS styles here */
+        .container {
+            max-width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+            border: solid red;
+            border-radius: 10px;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Maintain image aspect ratio and cover the slide */
+        }
+
+        .swiper-slide:hover {
+            transform: scale(1.2); /* Apply the transform effect on hover */
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="Programming In Java.jpg" alt="Image 1" height="auto" width="auto">
+                </div>
+                <div class="swiper-slide">
+                    <img src="Data Base Management System.jpg" alt="Image 2" height="398px" width="798px">
+                </div>
+                <div class="swiper-slide">
+                    <img src="Profile Photo.jpg" alt="Image 3">
+                </div>
+                <!-- Add more slides as needed -->
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true, // Set to true for continuous loop
+            autoplay: {
+                delay: 3000, // Delay in milliseconds between each slide
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
+        var slides = document.querySelectorAll('.swiper-slide');
+
+        // Pause autoplay and apply transform on mouseover
+        slides.forEach(function(slide) {
+            slide.addEventListener('mouseover', function() {
+                mySwiper.autoplay.stop();
+            });
+
+            slide.addEventListener('mouseout', function() {
+                mySwiper.autoplay.start();
+            });
+        });
+    </script>
+</body>
+</html>

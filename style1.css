@@ -1,0 +1,248 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for body */
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+
+/* Header styles */
+header {
+    background-color: #000000;
+    color: #fff;
+    height: auto;
+    display: flex; /* Use flexbox to create a horizontal layout */
+    justify-content: space-between; /* Spread the content evenly along the horizontal axis */
+    align-items: center; /* Vertically center the content */
+}
+
+.header-left {
+    padding-left: 50px;
+}
+
+.header-right {
+    padding-right: 50px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 20px;
+}
+
+header h4{
+    font-size: 15px;
+    margin: 20px;
+}
+nav ul {
+    list-style: none;
+    padding-left: 20px;
+    padding-top: 40px;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ff0000;
+}
+
+a:hover{
+    color: rgb(255, 247, 0);
+    font-size: 30px;
+    transition: transform 0.3s;
+    border:solid rgb(51, 0, 255);
+}
+
+/* Section styles */
+.section {
+    padding: 40px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px; /* Add padding to create space on both sides */
+    border: solid;
+    border-radius: 25px;
+}
+
+/* Portfolio item styles */
+.portfolio-item {
+    margin: 20px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+.social-icons {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons li {
+    margin: 10px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #0400f8;
+    font-size: 15px;
+}
+
+
+#download-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#download-button:hover {
+    background-color: #0056b3;
+}
+
+#download-button:focus {
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+body {
+    transition: background-color 0.5s;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.toggle-container {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 25px;
+}
+
+.toggle-label {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 25px;
+    background-color: #007BFF;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+#day-night-toggle {
+    display: none;
+}
+
+#day-night-toggle:checked + .toggle-label {
+    background-color: #000;
+}
+
+/* Night Mode Styles */
+#day-night-toggle:checked + .toggle-label::before {
+    content: "Night";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+/* Day Mode Styles */
+.toggle-label::before {
+    content: "Day";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
